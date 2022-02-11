@@ -17,7 +17,7 @@ document.getElementById("weatherSubmit").addEventListener("click", function(even
       return response.json();
     }).then(function(json) {
       let results = "";
-      results += '<h2>Weather in ' + json.name + "</h2>";
+      results += '<h2>Today\'s weather in ' + json.name + "</h2>";
       for (let i=0; i < json.weather.length; i++) {
 	results += '<img src="http://openweathermap.org/img/w/' + json.weather[i].icon + '.png"/>';
       }
