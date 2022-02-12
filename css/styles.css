@@ -46,9 +46,9 @@
 }
 
 .divflex{
-  width: 17%;
+  /* width: 50%; */
   text-align: center;
-  margin: auto;
+  /* margin: auto; */
   padding-bottom: 25px;
 }
 
@@ -280,6 +280,13 @@ bottom:0;
    right: 0;
    top: 0;
  }
+ #forecastResults{
+   display: wrap;
+
+
+ }
+
+ /* Add some padding inside the card container */
 
  .flex-container{
    display: flex;
@@ -326,18 +333,19 @@ bottom:0;
 
 
   .divflex{
-    width: 200px;
+    width: 100%;
+    display: block;
     text-align: center;
     padding-bottom: 25px;
 justify-content: center;
     }
-  #forecastResults{
+  /* #forecastResults{
     display: grid;
     margin: auto;
     justify-content: center;
 align-items: center;
   }
-}
+} */
 
 
 @media only screen and (min-width: 401px) and (max-width: 960px) {
@@ -357,12 +365,12 @@ align-items: center;
   }
 
   .divflex{
-    width: 17%;
+    width: 50%;
     /* text-align: center; */
     padding-bottom: 25px;
     align-items: center;
     justify-content: center;
-    margin: 0px;
+    margin: auto;
   }
   #forecastResults{
     display: wrap;
@@ -402,7 +410,13 @@ align-items: center;
 /* Desktop Styles */
 @media only screen and (min-width: 961px) {
 
-
+  .divflex{
+    width: 17%;
+    padding-bottom: 25px;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+  }
   .flex-container{
     display: flex;
     padding-bottom: 10px;

@@ -48,9 +48,6 @@ document.getElementById("weatherSubmit").addEventListener("click", function(even
       // Set the required alignment
       const divflex = document.createElement("div");
 
-
-      // for(let i = 0; i < json.list.length; i++)
-      // { forecast += "<div class=\"container{i}\">";
       for (let i=0; i < json.list.length; i++) {
         forecast += "<div class=\"divflex\">";
 
@@ -58,13 +55,10 @@ document.getElementById("weatherSubmit").addEventListener("click", function(even
         forecast +=  "<h2>" + moment(json.list[i].dt_txt).format('MMMM Do YYYY, h:mm:ss a') + "</h2>";
         forecast += "<p>Temperature: " + json.list[i].main.temp + "<br>" + "Min. Temperature: " + json.list[i].main.temp_min +
                 "<br>" + "Max Temperature: " + json.list[i].main.temp_max +  "</p>";
-
         forecast += '<img src="http://openweathermap.org/img/w/' + json.list[i].weather[0].icon + '.png"/>';
         forecast +=  "</div class=\"card\"> </div class=\"container\">"
         forecast += "</div class=\"divflex\">";
        }
-       // forectas += ""
-     // }
 
        console.log(json);
        document.getElementById("weatherResults").style.visibility = "visible";
