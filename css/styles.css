@@ -365,7 +365,7 @@ align-items: center;
     margin: 0px;
   }
   #forecastResults{
-    display: grid;
+    display: wrap;
     align-items: center;
     /* margin: auto; */
     justify-content: center;

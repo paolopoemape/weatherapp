@@ -22,6 +22,7 @@ document.getElementById("weatherSubmit").addEventListener("click", function(even
 	results += '<img src="http://openweathermap.org/img/w/' + json.weather[i].icon + '.png"/>';
       }
       results += '<h2>' + json.main.temp + " &deg;F</h2>"
+      results += "<p> Humidity level:" + json.main.humidity + "</p>"
       results += "<p>"
       for (let i=0; i < json.weather.length; i++) {
 	results += json.weather[i].description
@@ -55,7 +56,9 @@ document.getElementById("weatherSubmit").addEventListener("click", function(even
 
         forecast += "<div class=\"card\"> <div class=\"container\">";
         forecast +=  "<h2>" + moment(json.list[i].dt_txt).format('MMMM Do YYYY, h:mm:ss a') + "</h2>";
-        forecast += "<p>Temperature: " + json.list[i].main.temp + "</p>";
+        forecast += "<p>Temperature: " + json.list[i].main.temp + "<br>" + "Min. Temperature: " + json.list[i].main.temp_min +
+                "<br>" + "Max Temperature: " + json.list[i].main.temp_max +  "</p>";
+
         forecast += '<img src="http://openweathermap.org/img/w/' + json.list[i].weather[0].icon + '.png"/>';
         forecast +=  "</div class=\"card\"> </div class=\"container\">"
         forecast += "</div class=\"divflex\">";
